@@ -1,0 +1,31 @@
+.container{
+  width: 100%;
+  padding: 20px;
+  overflow-y: scroll;
+  flex: 1;
+}
+
+.item{
+  margin-bottom: 20px;
+  aspect-ratio: 16 / 9;
+}
+
+.loading{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  opacity: 0.4;
+  height: 100%;
+}
+
+.noProducts{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  opacity: 0.4;
+  height: 100%;
+}

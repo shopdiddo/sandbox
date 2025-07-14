@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --gutter: 20px;
+  --video-gutter: 30px;
+  --timeline-gap: 4px;
+  --timeline-part-border-radius: 3px;
+  --video-border-radius: 20px;
+
+
+  --font-code: 'SF Mono', 'Monaco', 'Incosolata', 'Roboto Mono', monospace;
+  --darkgrey: rgba(12, 12, 12, 1);
+  --default-color: white;
+  --purple: #8f51f5;
+
+  --glassy-box-shadow: 0 0 0 1px #00000066, 0 0 15px 2px #00000015, inset 0 1.5px #ffffff1e, inset 0 -1px #0000000a, inset 0 0 0 1px #ffffff15, inset 0 0 30px #ffffff0c;
+  --glass-bg: rgba(0, 0, 0, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --accent-primary: rgba(255, 255, 255, 0.92);
+  --accent-secondary: rgba(255, 255, 255, 0.68);
+  --accent-muted: rgba(255, 255, 255, 0.45);
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 14px;
+  --spacing-xl: 16px;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  --transition-fast: 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --transition-spring: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 20px rgba(255, 255, 255, 0.1);
+  --shadow-interactive: 0 8px 32px rgba(255, 255, 255, 0.15);
+}
+
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+body{
+  color: var(--default-color);
+  user-select: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+  background-color: rgba(0,0,0,0);
+  -webkit-border-radius: 100px;
+  transition: 0.2s background-color;
+}
+
+::-webkit-scrollbar:hover {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-border-radius: 100px;
+  transition: 0.2s;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.31);
+  -webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  min-height: 10px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  min-width: 10px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@media (width < 1500px) {
+  body{
+    zoom: 0.8;
+  }
+}
+
+@media (height < 800px){
+  html{
+    zoom: 0.8;
+  }
+}
+
+img {
+  pointer-events: none;
+}

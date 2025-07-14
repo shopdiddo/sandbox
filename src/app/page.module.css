@@ -1,0 +1,48 @@
+.container{
+  background: var(--darkgrey);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+}
+
+.videoSelector{
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 400px;
+  min-width: 260px;
+
+}
+
+.videoContainer{
+  padding: 60px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.wrapper{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: var(--video-border-radius);
+  overflow: hidden;
+}
+
+.video{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.videoShopContainer{
+  overflow: hidden;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}

@@ -1,0 +1,114 @@
+.overlayWrapper{
+  inset: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 20;
+  user-select: none;
+}
+
+.backdrop{
+  height: 100%;
+  width: 100%; 
+}
+
+.gradientBlurContainer{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.gradientBlur{
+  width: 1400%;
+  height: 100%;
+  max-width: 0;
+  position: absolute;
+  right: 0;
+  mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.overlayContainer{
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  height: 100%;
+  pointer-events: auto;
+
+  /* temp */
+  min-width: 400px;
+}
+
+
+.overlay{
+  width: clamp(300px, 620px, 620px);
+  height: 100%;
+  border-radius: 16px;
+  backdrop-filter: blur(40px) saturate(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.content{
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleContainer{
+  /* background: rgba(0,0,0,0.1); */
+  border-bottom: 1px solid #ffffff08;
+  align-items: center;
+  height: 96px;
+  display: flex;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.title{
+  color: #ffffffde;
+  font-size: 22px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 2px;
+  padding-left: 36px;
+}
+
+.closeBtn{
+  --size: 32px;
+
+  height: var(--size);
+  width: var(--size);
+  margin-top: 2px;
+  box-shadow: 0 4px 16px #0003, inset 0 1px #ffffff14;
+  right: 36px;
+  color: white;
+  position: absolute;
+  color: #ffffffe6;
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+  pointer-events: auto;
+  background: #ffffff14;
+  border: 1px solid #ffffff1f;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  transition: all .25s cubic-bezier(.4, 0, .2, 1);
+  display: flex;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transform: scale(1.05);
+}
+
+.closeBtnIcon{
+  width: 18px;
+}
